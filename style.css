@@ -1,23 +1,28 @@
 
-/* Variáveis para fácil transição de temas */
+/* ==========================================
+   VARIÁVEIS DE CORES E TRANSIÇÕES (Nível 4)
+   ========================================== */
 :root {
-    --bg-primary: #f4f7f6;
-    --bg-card: #ffffff;
-    --text-main: #2c3e50;
-    --accent-color: #3498db;
-    --success-color: #2ecc71;
-    --error-color: #e74c3c;
-    --transition-speed: 0.3s;
+    --bg-primary: #f4f7f6;        /* Cor de fundo do site (Claro) */
+    --bg-card: #ffffff;           /* Fundo dos cartões e secções */
+    --text-main: #2c3e50;         /* Cor principal do texto */
+    --accent-color: #3498db;      /* Cor tecnológica (Azul) */
+    --success-color: #2ecc71;     /* Cor de sucesso para o Quiz (Verde) */
+    --error-color: #e74c3c;       /* Cor de erro para o Quiz (Vermelho) */
+    --transition-speed: 0.3s;     /* Velocidade das transições suaves */
 }
 
-/* Modo Escuro */
+/* Classe aplicada via JavaScript para o Modo Escuro */
 body.dark-mode {
     --bg-primary: #121212;
     --bg-card: #1e1e1e;
     --text-main: #e0e0e0;
-    --accent-color: #bb86fc;
+    --accent-color: #bb86fc;     /* Roxo tecnológico para contraste */
 }
 
+/* ==========================================
+   RESETS E CONFIGURAÇÕES GERAIS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -32,11 +37,14 @@ body {
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
+/* ==========================================
+   LAYOUT COM FLEXBOX (Exigência Técnica)
+   ========================================== */
 header {
     background-color: var(--bg-card);
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     text-align: center;
-    border-bottom: 3px solid var(--accent-color);
+    border-bottom: 4px solid var(--accent-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,89 +53,26 @@ header {
 
 main {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem; /* Espaçamento ideal entre as secções */
 }
 
 section {
     background-color: var(--bg-card);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: background-color var(--transition-speed);
 }
 
-h1, h2 {
-    margin-bottom: 1rem;
-}
-
+/* ==========================================
+   ESTILIZAÇÃO DO FORMULÁRIO E QUIZ
+   ========================================== */
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-
-fieldset {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-label {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background var(--transition-speed);
-}
-
-/* Hover suave exigido no Nível 4 */
-label:hover {
-    background-color: rgba(52, 152, 219, 0.1);
-}
-
-button {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.2s, background 0.3s;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
-#resultado-quiz {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.sucesso { background-color: var(--success-color); color: white; }
-.erro { background-color: var(--error-color); color: white; }
-.hidden { display: none; }
-
-footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-}
-
-/* Aula 4: Responsividade */
-@media (max-width: 600px) {
-    main {
-        margin: 1rem auto;
-    }
-    header h1 {
-        font-size: 1.5rem;
-    }
-}
+    gap: 1.2rem;
+    margin-top: 1.5rem;
