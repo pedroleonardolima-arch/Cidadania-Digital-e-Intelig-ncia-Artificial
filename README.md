@@ -1,29 +1,28 @@
+
 # Portal de Consciência Digital: IA e Desinformação 🌐🔒
 
 #cidadaniadigital2026
 
-Este projeto consiste em um portal web interativo focado na conscientização comunitária sobre os perigos da desinformação automatizada e na educação para a identificação de mídias manipuladas por Inteligência Artificial (Deepfakes). Desenvolvido para a disciplina de Educação Digital e IA do Ensino Médio.
-
-## 🚀 Link do Projeto Técnico
-O site está publicado e pode ser acessado publicamente através do GitHub Pages:
-👉 [INSIRA_AQUI_O_LINK_DO_SEU_GITHUB_PAGES]
+Portal web interativo de alto desempenho focado na conscientização comunitária sobre os impactos das mídias manipuladas por Inteligência Artificial (Deepfakes) e no combate à desinformação automatizada. Projeto prático desenvolvido para a disciplina de Educação Digital e IA do Ensino Médio.
 
 ---
 
-## 🛠️ Funcionalidades e Interatividades (Critérios de Avaliação)
-- **Estrutura Semântica:** Utilização rigorosa de tags HTML5 (`<main>`, `<section>`, `<footer`, `<form>`) para garantir acessibilidade e SEO.
-- **Layout Fluido (Flexbox):** Alinhamento responsivo projetado para desktops e dispositivos móveis através de CSS Media Queries.
-- **Efeitos Visuais Interativos:** Inclusão de transições suaves (`hover`) nos botões e seletores para guiar a atenção do usuário.
-- **Quiz Anti-Desinformação (JavaScript):** Validador dinâmico que processa as respostas do usuário em variáveis locais e exibe feedbacks personalizados manipulando o DOM.
-- **Controle de Acessibilidade:** Botão dinâmico para alternar entre Modo Claro e Modo Escuro.
+## 🛠️ Recursos de Engenharia e Performance (Nível 4)
+
+- **Arquitetura Dinâmica de Dados (JS):** O quiz não é estático no HTML. Ele utiliza uma estrutura de objetos (`Data Object`) em JavaScript que renderiza as perguntas e alternativas de forma 100% dinâmica no DOM, permitindo escalabilidade futura do portal.
+- **Persistência de Estado (Acessibilidade):** O alternador de Modo Escuro e Modo Claro utiliza `localStorage` do navegador. Isso significa que o site memoriza a preferência visual do usuário mesmo se a página for fechada ou atualizada.
+- **UI Moderno com Microinterações:** Sistema de design baseado em variáveis CSS estruturadas (`:root`), efeitos de transição cúbica (`cubic-bezier`) para animações mais suaves, efeito de foco avançado nos inputs de rádio (`:has(input:checked)`) e deslocamento visual (`transform: translateX`) nas opções.
+- **Responsividade Fluida:** Layout adaptável via Media Queries que reorganiza o tamanho dos componentes e a orientação dos botões para visualização perfeita em smartphones e tablets.
 
 ---
 
-## 📁 Organização do Repositório
-Para cumprir as boas práticas de desenvolvimento, os recursos foram estruturados em pastas lógicas:
+## 📁 Organização Estruturada do Repositório
+
+O projeto segue as diretrizes rígidas de organização e separação de conceitos do mercado de desenvolvimento:
+
 ```text
-├── index.html          # Página principal do portal
+├── index.html          # Estrutura semântica e acessível (tags ARIA)
 ├── css/
-│   └── style.css       # Estilização, variáveis de cores e responsividade
+│   └── style.css       # Sistema de design, temas visuais e responsividade
 └── js/
-    └── script.js       # Lógica do quiz e alternador de tema escuro
+    └── script.js       # Motor dinâmico do quiz e persistência de dados
