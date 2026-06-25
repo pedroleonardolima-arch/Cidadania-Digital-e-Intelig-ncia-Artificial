@@ -1,13 +1,18 @@
-// Seleção de elementos do DOM
+// ==========================================
+// SELEÇÃO DE ELEMENTOS DO DOM (HTML)
+// ==========================================
 const btnAcessibilidade = document.getElementById('btn-acessibilidade');
 const quizForm = document.getElementById('quiz-form');
 const resultadoQuiz = document.getElementById('resultado-quiz');
 
-// 1. Funcionalidade de Acessibilidade (Modo Escuro)
+// ==========================================
+// 1. ACESSIBILIDADE: BOTÃO MODO ESCURO
+// ==========================================
 btnAcessibilidade.addEventListener('click', () => {
+    // Alterna a classe 'dark-mode' no corpo do site
     document.body.classList.toggle('dark-mode');
     
-    // Altera o texto do botão de acordo com o modo atual
+    // Atualiza o texto do botão de forma dinâmica para guiar o usuário
     if (document.body.classList.contains('dark-mode')) {
         btnAcessibilidade.textContent = 'Alternar Modo Claro';
     } else {
@@ -15,34 +20,26 @@ btnAcessibilidade.addEventListener('click', () => {
     }
 });
 
-// 2. Validador do Quiz Anti-Desinformação
+// ==========================================
+// 2. INTERATIVIDADE: VALIDADOR DO QUIZ
+// ==========================================
 quizForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Impede a página de recarregar
+    // Evita o comportamento padrão do formulário (recarregar a página)
+    event.preventDefault();
     
-    // Captura a opção selecionada usando FormData
-    const dados = new FormData(quizForm);
-    const respostaUsuario = dados.get('pergunta1');
+    // Captura a opção que o usuário selecionou
+    const dadosFormulario = new FormData(quizForm);
+    const respostaUsuario = dadosFormulario.get('pergunta1');
     
-    // Validação
+    // Validação caso o usuário clique em enviar sem selecionar nada
     if (!respostaUsuario) {
-        resultadoQuiz.textContent = "Por favor, selecione uma alternativa antes de enviar.";
+        resultadoQuiz.textContent = "⚠️ Por favor, selecione uma alternativa antes de verificar!";
         resultadoQuiz.className = "erro";
         return;
     }
     
-    // Processamento de informações em variáveis antes de exibir na tela (Critério Nível 4)
+    // VARIÁVEIS DE PROCESSAMENTO (Exigência do Nível 4)
     let mensagemFeedback = "";
-    let classeFeedback = "";
+    let classeEstilo = "";
     
-    if (respostaUsuario === 'correto') {
-        mensagemFeedback = "Parabéns! Você acertou. Falhas de sincronia labial e artefatos nas bordas do rosto são os principais indícios de mídias geradas por IA.";
-        classeFeedback = "sucesso";
-    } else {
-        mensagemFeedback = "Resposta incorreta. Dica: observe atentamente os movimentos do rosto e inconsistências de áudio/vídeo.";
-        classeFeedback = "erro";
-    }
-    
-    // Exibição dinâmica na tela
-    resultadoQuiz.textContent = mensagemFeedback;
-    resultadoQuiz.className = classeFeedback; // Remove o 'hidden' e adiciona a classe de estilo
-});
+    // Lógica para verificar se
