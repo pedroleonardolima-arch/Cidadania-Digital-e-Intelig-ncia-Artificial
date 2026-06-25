@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Cidadania Digital: IA e Desinformação</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Consciência Digital</h1>
+        <p>Desmistificando Deepfakes e a Desinformação na Era da IA</p>
+        <button id="btn-acessibilidade" class="btn-theme">Alternar Modo Escuro</button>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são mídias (vídeos, áudios ou imagens) sintetizadas por Inteligência Artificial que imitam a aparência e a voz de pessoas reais de forma hiper-realista. Elas representam um grande desafio para a verdade e a cidadania digital.</p>
+        </section>
+
+        <section id="quiz-section">
+            <h2>Quiz Anti-Desinformação</h2>
+            <p>Será que você consegue identificar uma mídia manipulada? Responda à questão abaixo:</p>
+            
+            <form id="quiz-form">
+                <fieldset>
+                    <legend>Qual destas alternativas indica um sinal comum de um vídeo com deepfake?</legend>
+                    
+                    <label>
+                        <input type="radio" name="pergunta1" value="errado1"> Piscar de olhos perfeitamente natural e iluminação sem falhas.
+                    </label>
+                    <label>
+                        <input type="radio" name="pergunta1" value="correto"> Movimentos labiais desalinhados com o áudio e borrões nas bordas do rosto.
+                    </label>
+                    <label>
+                        <input type="radio" name="pergunta1" value="errado2"> Resolução de vídeo extremamente alta em todas as partes do cenário.
+                    </label>
+                </fieldset>
+                <button type="submit" id="btn-enviar">Verificar Resposta</button>
+            </form>
+            <div id="resultado-quiz" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para o Projeto de Cidadania Digital. Conteúdo Autoral.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
