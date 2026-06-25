@@ -1,57 +1,54 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Cidadania Digital: IA e Desinformação</title>
+    <title>Portal Cidadania Digital | IA & Desinformação</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Consciência Digital</h1>
-        <p>Desmistificando Deepfakes e a Desinformação na Era da IA</p>
-        <button id="btn-acessibilidade" class="btn-theme">Alternar Modo Escuro</button>
+    <header role="banner">
+        <div class="header-container">
+            <h1>Cidadania <span>Digital</span></h1>
+            <p>Guia Prático contra Deepfakes e Desinformação Automatizada</p>
+            <button id="btn-acessibilidade" aria-label="Alternar tema visual" class="btn-toggle">
+                <span class="icon">🌓</span> <span class="text">Modo Escuro</span>
+            </button>
+        </div>
     </header>
 
     <main>
-        <section id="sobre">
-            <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são mídias (vídeos, áudios ou imagens) sintetizadas por Inteligência Artificial que imitam a aparência e a voz de pessoas reais de forma hiper-realista. Elas representam um grande desafio para a verdade e a cidadania digital.</p>
+        
+        <section id="sobre" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">O Desafio das Deepfakes</h2>
+            <p>As <strong>Deepfakes</strong> utilizam algoritmos de Inteligência Artificial e aprendizagem profunda (Deep Learning) para sintetizar rostos, vozes e expressões de maneira hiper-realista. Quando usadas de forma maliciosa, tornam-se armas perigosas para espalhar desinformação em massa, arruinar reputações e fraudar sistemas de segurança.</p>
+            
+            <div class="alerta-box">
+                <strong>💡 Fique Atento:</strong> Desenvolver o pensamento crítico e saber auditar mídias digitais são os primeiros passos da verdadeira cidadania digital.
+            </div>
         </section>
 
-        <section id="quiz-section">
-            <h2>Quiz Anti-Desinformação</h2>
-            <p>Será que você consegue identificar uma mídia manipulada? Responda à questão abaixo:</p>
+        <section id="quiz-section" aria-labelledby="titulo-quiz">
+            <h2 id="titulo-quiz">Treinamento Antifraude</h2>
+            <p>Teste suas habilidades! Analise as opções e descubra se você consegue rastrear as falhas deixadas pelos geradores de IA.</p>
             
             <form id="quiz-form">
-                <fieldset>
-                    <legend>Qual destas alternativas indica um sinal comum de um vídeo com deepfake?</legend>
-                    
-                    <label class="quiz-option">
-                        <input type="radio" name="pergunta1" value="errado1"> 
-                        <span>Piscar de olhos perfeitamente natural e iluminação sem falhas.</span>
-                    </label>
-                    
-                    <label class="quiz-option">
-                        <input type="radio" name="pergunta1" value="correto"> 
-                        <span>Movimentos labiais desalinhados com o áudio e borrões nas bordas do rosto.</span>
-                    </label>
-                    
-                    <label class="quiz-option">
-                        <input type="radio" name="pergunta1" value="errado2"> 
-                        <span>Resolução de vídeo extremamente alta em todas as partes do cenário.</span>
-                    </label>
-                </fieldset>
-                <button type="submit" id="btn-enviar">Verificar Resposta</button>
+                <div id="quiz-container">
+                    </div>
+                <button type="submit" id="btn-enviar" class="btn-submit">Verificar Resposta</button>
             </form>
-            <div id="resultado-quiz" class="hidden"></div>
+            
+            <div id="resultado-quiz" class="hidden" role="alert"></div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Desenvolvido para o Projeto de Cidadania Digital. Conteúdo Autoral.</p>
+    <footer role="contentinfo">
+        <p>&copy; 2026 Portal Cidadania Digital. Desenvolvido para a avaliação de Educação Digital e IA.</p>
+        <p class="tag-projeto">Tag Oficial: <code>#cidadaniadigital2026</code></p>
     </footer>
 
     <script src="js/script.js"></script>
